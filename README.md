@@ -14,6 +14,6 @@ The core obfuscation logic is separated into a reusable library, with a demo con
 - Comes with a **demo console application** to test functionality.
 </br>
 
-# Medias
+# Media
 ![Screenshot 1](Introduction%20Media/Screenshot%201.png)
 ![Screenshot 2](Introduction%20Media/Screenshot%202.png)
