@@ -12,10 +12,7 @@ The core obfuscation logic is separated into a reusable library, with a demo con
 - Structured as multiple focused projects: a shared core, an obfuscator library, a deobfuscator library, and a demo application.
 - Supports **obfuscation and deobfuscation** operations.
 - Comes with a **demo console application** to test functionality.
-</br>
-
-# Requirements
-- **[dnlib](https://github.com/0xd4d/dnlib)** — used for reading, modifying, and writing .NET assemblies.
+- Uses **dnlib** for reading, modifying, and writing .NET assemblies.
 </br>
 
 # Features
