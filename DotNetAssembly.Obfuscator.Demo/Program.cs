@@ -1,9 +1,5 @@
 ﻿
-using dnlib.DotNet.Writer;
-using dnlib.DotNet;
 using System.Diagnostics;
-using System.Reflection;
-using System.Reflection.Metadata;
 
 using Assembly;
 using Assembly.Obfuscation;
