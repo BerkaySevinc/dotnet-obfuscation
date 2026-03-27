@@ -3,7 +3,7 @@
 namespace Assembly.Obfuscation;
 
 
-// UNDONE: junk generate for other members (method, prop, namespace etc.), with other types (string, int, short, bool etc.), and with various values
+// TODO: Generate junk for other member types (methods, properties, namespaces, etc.) with various value types (string, int, short, bool, etc.) and values.
 
 
 public class JunkGenerator : MemberGenerator

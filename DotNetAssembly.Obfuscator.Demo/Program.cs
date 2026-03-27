@@ -5,9 +5,9 @@ using Assembly;
 using Assembly.Obfuscation;
 
 
-// TODO: take options as an input from user
-// TODO: better logs
-// TODO: WriteLineColored(text, color) like method, for Console.WriteLine with text color parameter
+// TODO: Accept obfuscation options as user input.
+// TODO: Improve logging output.
+// TODO: Add a WriteLineColored(text, color) helper method wrapping Console.WriteLine with a foreground color parameter.
 
 
 
@@ -30,7 +30,7 @@ if (string.IsNullOrEmpty(assemblyPath)) return;
 // Gets assembly file info.
 var assemblyFileInfo = new FileInfo(assemblyPath);
 
-// Returns if assembly file doesn't exists.
+// Returns if the assembly file does not exist.
 if (!assemblyFileInfo.Exists) return;
 
 // Creates obfuscator.
@@ -66,7 +66,7 @@ Console.Write("\n\tAssembly :  ");
 Console.ForegroundColor = ConsoleColor.Blue;
 Console.WriteLine(obfuscator.Assembly.FullName);
 
-// Displays resolved dependencies.
+// Displays modules.
 Console.ForegroundColor = ConsoleColor.Green;
 Console.WriteLine("\n\tModules:");
 Console.ForegroundColor = ConsoleColor.Blue;
@@ -89,7 +89,7 @@ Console.Write("\n\n\tPress any key to start obfuscation...");
 Console.ReadKey();
 Console.WriteLine("\n\n");
 
-// Starts stop watch to calculate time that obfuscation took.
+// Starts the stopwatch to measure obfuscation duration.
 var obfuscationStopWatch = Stopwatch.StartNew();
 
 Console.ForegroundColor = ConsoleColor.Cyan;
@@ -119,11 +119,11 @@ var obfuscatorOptions = new ObfuscatorOptions
 // Obfuscates assembly.
 obfuscator.Obfuscate(obfuscatorOptions);
 
-// Calculates time that obfuscation took.
+// Stops the stopwatch and calculates the obfuscation duration.
 obfuscationStopWatch.Stop();
 double obfusationDurationSeconds = Math.Round(obfuscationStopWatch.Elapsed.TotalSeconds, 3);
 
-// Displays seconds that obfuscation took.
+// Displays the obfuscation duration in seconds.
 Console.ForegroundColor = ConsoleColor.Green;
 Console.Write($"\n\n\tDuration :  ");
 Console.ForegroundColor = ConsoleColor.Yellow;

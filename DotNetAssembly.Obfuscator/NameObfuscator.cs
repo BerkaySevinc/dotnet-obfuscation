@@ -36,7 +36,7 @@ public class NameObfuscator : Renamer
 
             foreach (var type in module.Types)
             {
-                // Skips special cases
+                // Skips special cases.
                 if (type.IsSpecialName) continue;
 
                 string initialName = type.Name;
@@ -48,7 +48,7 @@ public class NameObfuscator : Renamer
 
                 foreach (var referancedModule in Assembly.Modules)
                 {
-                    // Renames referances.
+                    // Renames references.
                     foreach (TypeRef TypeRef in referancedModule.GetTypeRefs())
                     {
                         if (TypeRef.FullName == initialFullName)

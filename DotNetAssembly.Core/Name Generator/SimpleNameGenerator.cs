@@ -2,8 +2,8 @@
 
 namespace Assembly;
 
-// UNDONE: SimpleNameGenerator
-// UNDONE: doesnt work if prop, field, method etc. same named
+// TODO: SimpleNameGenerator is incomplete.
+// FIXME: Does not work when a property, field, or method shares the same name.
 
 
 public class SimpleNameGenerator : NameGenerator

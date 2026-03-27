@@ -5,7 +5,7 @@ using dnlib.DotNet.Emit;
 namespace Assembly.Obfuscation;
 
 
-// UNDONE: value encoders just encodes method body local variables, not encoding props, fields etc.?
+// NOTE: Value encoding currently only applies to method body instructions; properties and fields are not encoded.
 
 
 public class ValueObfuscator : ValueModifier

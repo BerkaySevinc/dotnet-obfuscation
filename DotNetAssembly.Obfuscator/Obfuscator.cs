@@ -2,10 +2,10 @@
 namespace Assembly.Obfuscation;
 
 
-// TODO: better EventArgs (ResultName prop, parent prop for some of EventArgs)
-// TODO: obfuscationType prop (name, value, junk vs.) for events, so logger can know what type is it
-// TODO: check special cases like IsRuntimeSpecial etc. for NameGenerators, ValueModifiers, MemberGenerators etc.
-// TODO: namespace obfuscation or hidden namespace, and junk namespaces
+// TODO: Improve EventArgs by adding a ResultName property and a parent property for certain EventArgs types.
+// TODO: Add an ObfuscationType property (name, value, junk, etc.) to events so the logger can identify the obfuscation type.
+// TODO: Handle special cases such as IsRuntimeSpecialName for NameGenerators, ValueModifiers, and MemberGenerators.
+// TODO: Implement namespace obfuscation (hidden namespaces) and junk namespace generation.
 
 
 
@@ -33,7 +33,7 @@ public class Obfuscator : AssemblyModifier
         // Creates default options if given is null.
         options ??= new ObfuscatorOptions();
 
-        // Generates junks.
+        // Generates junk.
         GenerateJunks(options);
 
         // Obfuscates values.
@@ -45,7 +45,7 @@ public class Obfuscator : AssemblyModifier
 
     private void GenerateJunks(ObfuscatorOptions options)
     {
-        // Gets & resets name generator.
+        // Gets and resets the name generator.
         NameGenerator junkNameGenerator = options.JunkNameGenerator;
         junkNameGenerator.Reset();
 
@@ -59,7 +59,7 @@ public class Obfuscator : AssemblyModifier
 
     private void ObfuscateNames(ObfuscatorOptions options)
     {
-        // Gets & resets name generator.
+        // Gets and resets the name generator.
         NameGenerator obfuscatedNameGenerator = options.ObfuscatedNameGenerator;
         obfuscatedNameGenerator.Reset();
 

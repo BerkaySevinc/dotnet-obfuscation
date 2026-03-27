@@ -86,7 +86,7 @@ public class ComplexNameGenerator : NameGenerator
                 int plusCount = averageSpaceLenght + Signature.Length;
                 for (int i = spaceCount; i > 1; i--)
                 {
-                    // Selects by probablity = (number needed) / (number left)
+                    // NOTE: Selects by probability = (number needed) / (number left)
                     if (spaceLengthLeft > 0 && random.Next(i) < spaceLengthLeft)
                     {
                         signatureIndex++;
