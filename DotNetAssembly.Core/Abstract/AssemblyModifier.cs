@@ -46,7 +46,7 @@ public abstract class AssemblyModifier
             .Where(a => a != null)
             .ToList();
 
-        return resolved;
+        return resolved!;
     }
 
 

@@ -1,7 +1,6 @@
 ﻿
 using dnlib.DotNet.Writer;
 using dnlib.DotNet;
-using Obfuscation;
 using System.Diagnostics;
 using System.Reflection;
 using System.Reflection.Metadata;
